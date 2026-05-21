@@ -1,41 +1,38 @@
 #Exercice1
-nbre_dict = {
-    'Ten': 10,
-    'Twenty': 20,
-    'Thirty': 30
-}
+keys = ['Ten', 'Twenty', 'Thirty']
+values = [10, 20, 30]
+nbre_dict = dict(zip(keys, values))
 print(nbre_dict)
 
 #Exercice2
-family = {"rick": 43,
-                "beth": 13,
-                "morty": 5,
-                "summer": 8}
+family = {
+    "rick": 43,
+    "beth": 13,
+    "morty": 5,
+    "summer": 8
+}
 total_price = 0
 
 name = input("enter a name : ")
 age= int(input("enter an age : "))
+try:
+    age = int(age)
+except ValueError:
+    print("Please enter a valid age.")
+    exit()
 family[name] = age
 
 for key, value in family.items():
     if value < 3:
         print(f"{key} is free")
         total_price += 0
-    elif value>= 3 and value <= 12:
+    elif value >= 3 and value <= 12:
         print(f"{key} is 10 dollars")
         total_price += 10
     else:
         print(f"{key} is 15 dollars")
         total_price += 15
 print(f"the total price is {total_price} dollars")
-
-
-
-
-
-
-
-
 
      # Exercice3
 brand = {
@@ -80,7 +77,7 @@ def random_number(n):
         print("Congratulations! You guessed the number.")
     else:
         print(f"Sorry, the number was {nbre}. Better luck next time!")
-
+random_number(42)
 
 #Exercice 6
 def make_shirt(size="Large", text="I love Python"):
@@ -111,6 +108,8 @@ def main():
     else:
         print("It’s really hot! Stay cool.")
 
+main()
+
 #Exercice 8
 
 ingredients = []
@@ -123,7 +122,7 @@ while True:
         break
     
     ingredients.append(topping)
-    prix_total += 2,50
+    prix_total += 2.50
     print(f"Adding {topping} to your pizza.")
 
 print("\n--- Résumé de votre commande ---")
