@@ -1,4 +1,5 @@
 import math
+import turtle
 
 class Circle:
     def __init__(self, radius):
@@ -57,3 +58,26 @@ class Circle:
         if not isinstance(other, Circle):
             return NotImplemented
         return self._radius <= other._radius
+
+
+cercles = [Circle(30), Circle.from_diameter(200), Circle(10), Circle(60)]
+print("Avant le tri :", cercles)
+
+cercles_tries = sorted(cercles)
+print("Après le tri :", cercles_tries)
+
+screen = turtle.Screen()
+screen.setup(800, 400)
+t = turtle.Turtle()
+t.speed(3)
+
+t.penup()
+t.goto(-300, -50)
+
+for cercle in cercles_tries:
+    t.pendown()
+    t.circle(cercle.radius) 
+    t.penup()
+    t.forward(cercle.diameter + 20)
+
+turtle.done()
