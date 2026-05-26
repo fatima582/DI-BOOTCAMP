@@ -1,0 +1,26 @@
+[
+    {
+        "Nom":"Alice",
+        "Âge":25,
+        "Ville":"Paris",
+        "Profession":"Ingénieur"
+    },
+    {
+        "Nom":"Bob",
+        "Âge":30,
+        "Ville":"Lyon",
+        "Profession":"Designer"
+    },
+    {
+        "Nom":"Charlie",
+        "Âge":35,
+        "Ville":"Marseille",
+        "Profession":"Data Scientist"
+    },
+    {
+        "Nom":"David",
+        "Âge":40,
+        "Ville":"Lille",
+        "Profession":"Manager"
+    }
+]
