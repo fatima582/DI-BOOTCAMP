@@ -1,0 +1,15 @@
+﻿.venv-2/
+env/
+.vscode/
+__pycache__/
+.ipynb_checkpoints/
+*.zip
+*.csv
+*.txt
+*.pt
+*.safetensors
+*.pkl
+*.h5
+*.parquet
+*.db
+submission_repo/
